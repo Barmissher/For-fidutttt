@@ -179,3 +179,27 @@ body {
   pointer-events: none;
   z-index: 0;
 }
+
+
+/* Atur tata letak baru */
+.bcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Jarak antara konten utama dan kartu */
+}
+
+.birthday-container {
+  order: 1; /* Letakkan di atas */
+}
+
+.card-container {
+  order: 2; /* Letakkan di bawah */
+  margin-top: 20px;
+}
+
+/* Perbesar sedikit kartu hadiah & surat */
+.card {
+  width: 220px;
+  padding: 25px;
+}
