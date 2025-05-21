@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="falling-flowers"></div>
+  <div class="container">
+    <h1 class="title">Happy Birthday!</h1>
+    <div class="card-container">
+      <div class="card" id="giftCard">
+        <img src="assets/gift.png" alt="Gift" />
+        <a href="https://gifft.me/o/d/lnwai5rhetz702yllacihxw7" target="_blank">
+          <button>Click to Open</button>
+        </a>
+      </div>
+      <div class="card" id="letterCard">
+        <img src="assets/letter.png" alt="Letter" />
+        <button onclick="openLetter()">Read It</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Surat -->
+  <div class="modal" id="letterModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('letterModal')">&times;</span>
+      <p>Selamat ulang tahun! Semoga hari-harimu penuh kebahagiaan dan cinta.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
