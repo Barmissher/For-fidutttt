@@ -176,7 +176,7 @@ body {
 }
 
 .letter-text {
-  text-align: center;
+  text-align: Left;
   line-height: 1.8;
   font-size: 1.1em;
   padding: 15px;
