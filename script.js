@@ -1,10 +1,11 @@
 // Music and Confetti Functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize audio
-  const audio = new Audio('https://audio.jukehost.co.uk/lAn6MreyCUC9AZmrpet5TOg6pfxn5Qx1');
+  // Initialize audio - GANTI LINK DI SINI
+  const audio = new Audio('https://drive.google.com/file/d/1PQyzF-fUtAX2xAVrVA2FNngbyym2wZOC/view?usp=drivesdk');
   const playButton = document.querySelector('.play-music');
   let confettiActive = false;
   
+  // Play/Pause Music
   if (playButton) {
     playButton.addEventListener('click', function() {
       if (audio.paused) {
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Confetti function
+  // Confetti Effect
   function startConfetti() {
     if (confettiActive) return;
     
@@ -42,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();
     confettiActive = true;
-    
     window.currentConfetti = confetti;
   }
   
@@ -53,15 +53,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Create falling flowers
+  // Falling Flowers
   createFallingFlowers();
+  
+  // Letter Modal
+  const letterBtn = document.querySelector('#letterCard button');
+  if (letterBtn) {
+    letterBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('letterModal').style.display = 'block';
+    });
+  }
 });
 
-// Modal Functions
-function openLetter() {
-  document.getElementById('letterModal').style.display = 'block';
-}
-
+// Close Modal
 function closeModal(modalId) {
   document.getElementById(modalId).style.display = 'none';
 }
@@ -82,19 +87,12 @@ function createFallingFlowers() {
       flower.style.opacity = Math.random() * 0.5 + 0.5;
       flower.style.animation = `fall ${Math.random() * 10 + 5}s linear infinite`;
       flower.style.animationDelay = `${Math.random() * 5}s`;
-      
       container.appendChild(flower);
     }, i * 300);
   }
 }
 
-// Add falling animation to CSS
+// Add CSS Animation
 const style = document.createElement('style');
-style.innerHTML = `
-  @keyframes fall {
-    to {
-      transform: translateY(100vh) rotate(360deg);
-    }
-  }
-`;
+style.innerHTML = `@keyframes fall { to { transform: translateY(100vh) rotate(360deg); } }`;
 document.head.appendChild(style);
