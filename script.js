@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize audio
-  const audio = new Audio('https://drive.google.com/uc?export=download&id=1PQyzF-fUtAX2xAVrVA2FNngbyym2wZOC');
+  const audio = new Audio('https://audio.jukehost.co.uk/Y2gK7feZ5NDUVEXOnSK5HHkcALyaU5bV');
   const playButton = document.querySelector('.play-music');
   let confettiActive = false;
   
