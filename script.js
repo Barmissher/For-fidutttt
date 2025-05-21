@@ -1,7 +1,6 @@
-// Music and Confetti Functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize audio - GANTI LINK DI SINI
-  const audio = new Audio('https://drive.google.com/file/d/1PQyzF-fUtAX2xAVrVA2FNngbyym2wZOC/view?usp=drivesdk');
+  // Initialize audio
+  const audio = new Audio('https://drive.google.com/uc?export=download&id=1PQyzF-fUtAX2xAVrVA2FNngbyym2wZOC');
   const playButton = document.querySelector('.play-music');
   let confettiActive = false;
   
@@ -53,25 +52,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  // Falling Flowers
-  createFallingFlowers();
-  
   // Letter Modal
-  const letterBtn = document.querySelector('#letterCard button');
+  const letterBtn = document.getElementById('letterBtn');
   if (letterBtn) {
     letterBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      document.getElementById('letterModal').style.display = 'block';
+      document.getElementById('letterModal').style.display = 'flex';
     });
   }
+
+  // Falling Flowers
+  createFallingFlowers();
 });
 
-// Close Modal
 function closeModal(modalId) {
   document.getElementById(modalId).style.display = 'none';
 }
 
-// Falling Flowers Effect
 function createFallingFlowers() {
   const container = document.getElementById('falling-flowers');
   const flowerEmojis = ['🌸', '🌺', '🌷', '🌼', '🏵️', '💐', '🌻'];
