@@ -150,15 +150,17 @@ body {
   height: 100%;
   background-color: rgba(0,0,0,0.5);
 }
-
 .modal-content {
-  background-color: #fefefe;
+  background-color: #fff9f9;
   margin: 15% auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 80%;
-  max-width: 500px;
+  max-width: 300px;
   position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
 }
 
 .close {
@@ -174,13 +176,14 @@ body {
 }
 
 .letter-text {
-  text-align: left;
-  line-height: 1.6;
+  text-align: center;
+  line-height: 1.8;
   font-size: 1.1em;
+  padding: 15px;
 }
 
 .letter-text p {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 #falling-flowers {
